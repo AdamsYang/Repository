@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Umeet Interface simpleDemo</title>
+
+        <meta name="description" content="Umeet Interface simpleDemo">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+ 
+    </head>
+    <body>
+       <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="side-header side-content bg-white-op">
+                            <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                                    <i class="si si-drop"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                                    <li>
+                                        <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-amethyst pull-right"></i> <span class="font-w600">Amethyst</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/city.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/flat.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/modern.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-modern pull-right"></i> <span class="font-w600">Modern</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-smooth pull-right"></i> <span class="font-w600">Smooth</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="h5 text-white" href="${requestContext.contextPath}/index">
+                                <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 sidebar-mini-hide">meet</span>
+                            </a>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Content -->
+                        <div class="side-content">
+                            <ul class="nav-main">
+                               <li >
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-users"></i><span class="sidebar-mini-hide">会议管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/createConference">开始会议</a>
+                                        </li>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/ConferenceList">会议列表</a>
+                                        </li>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/removeConference">结束会议</a>
+                                        </li>
+										</ul>
+                                </li>
+
+								 <li class="open">
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-screen-tablet"></i><span class="sidebar-mini-hide">终端管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/addTerminal">终端添加</a>
+                                        </li>
+                                        <li>
+                                            <a class="active" href="${requestContext.contextPath}/updateTerminal">终端修改</a>
+                                        </li>
+										<li>
+                                            <a href="${requestContext.contextPath}/queryTerminal">终端查询</a>
+                                        </li>
+                                        <li>
+                                            <a  href="${requestContext.contextPath}/deleteTerminal">终端删除</a>
+                                        </li>
+										</ul>
+                                   </li>
+								   <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-call-in"></i><span class="sidebar-mini-hide">呼叫管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/callTerminal">呼叫终端</a>
+                                        </li>
+										</ul>
+									 </li>
+
+								 <li>
+
+
+									 <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-video-camera"></i><span class="sidebar-mini-hide">录播管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/recordingStart">开始录播</a>
+                                        </li>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/recordingStop">结束录播</a>
+                                        </li>
+										<li>
+                                            <a href="${requestContext.contextPath}/queryRecordVideoURL">查询录播视频地址</a>
+                                        </li>
+                                        
+										</ul>
+                                </li>
+								  <li>
+								    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-social-youtube"></i><span class="sidebar-mini-hide">直播管理</span></a>
+									 <ul>
+<!--                                         <li> -->
+<!--                                             <a href="${requestContext.contextPath}/startLive">开始直播</a> -->
+<!--                                         </li> -->
+                                        <li>
+                                            <a href="${requestContext.contextPath}/viewLive">查看直播</a>
+                                        </li>
+<!-- 										<li> -->
+<!--                                             <a href="${requestContext.contextPath}/stopLive">结束直播</a> -->
+<!--                                         </li> -->
+                                        
+										</ul>
+									</li>
+									 <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-settings"></i><span class="sidebar-mini-hide">监控管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/monitor">端口状态</a>
+                                        </li>
+										</ul>
+									 </li>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END Side Content -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <!-- Header Navigation Right -->
+                <ul class="nav-header pull-right">
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+                                <img src="assets/img/avatars/avatar10.jpg" alt="Avatar">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                               
+                                <li id="logout">
+                                    <a tabindex="-1" href="#">
+                                        <i class="si si-logout pull-right"></i>退出登录
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                      
+                </ul>
+                <!-- END Header Navigation Right -->
+
+                <!-- Header Navigation Left -->
+                <ul class="nav-header pull-left">
+                    <li class="hidden-md hidden-lg">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </li>
+                 
+                    <li class="visible-xs">
+                        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+                        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                   
+                </ul>
+                <!-- END Header Navigation Left -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7"> 
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>终端管理</li>
+                                <li><a class="link-effect" href="">修改终端</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content">
+                	
+                 <button id="error" style="display:none" class="js-notify btn btn-sm btn-danger" data-notify-type="danger" data-notify-align="center" data-notify-icon="fa fa-times" data-notify-message="终端修改失败！">Error</button>
+                 <button id="success" style="display:none" class="js-notify btn btn-sm btn-success" data-notify-type="success" data-notify-align="center" data-notify-icon="fa fa-check" data-notify-message="终端修改成功！">Success</button>
+
+                    <!-- Dynamic Table Full -->
+                    <div class="block">
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table  id="datatable" class="table table-bordered table-striped js-dataTable-full">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">ID</th>
+                                        <th class="text-center">终端UUID</th>
+                                        <th>终端名</th>                   
+                                        <th class="hidden-xs" style="width: 15%;">状态</th>
+                                        <th class="hidden-xs">终端呼叫地址</th>
+										<th class="hidden-xs" style="width: 15%;">终端型号</th>
+										<th class="hidden-xs" style="width: 15%;">操作</th>										                          
+                                    </tr>
+                                </thead>                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table Full -->
+
+            <div class="modal fade" id="modal-small" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-popout">
+                <div class="modal-content" >
+                    <div class="block block-themed block-transparent remove-margin-b">
+                        <div class="block-header bg-primary-dark">
+                            <ul class="block-options">
+                                <li>
+                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">修改</h3>
+                        </div>
+                        <div class="block-content">
+                            
+							<form id="form1" class="js-validation-bootstrap form-horizontal" action="#" method="post">
+                                        <div class="form-group">
+                                        	<input style="display:none" class="form-control" type="text" id="id" name="id" ">
+                                        	<input style="display:none" class="form-control" type="text" id="uuid" name="uuid" ">
+                                            <label class="col-md-4 control-label" for="name">终端名 <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="name" name="name" placeholder="请输终端名称（必填）">
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="col-md-4 control-label" for="terminalCallAddress">终端的呼叫地址 <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="terminalCallAddress" name="terminalCallAddress" placeholder="请输终端名称（必填）">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="terminalModel">终端型号 <span class="text-danger">*<span class="text-danger">
+											</span></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="terminalModel" name="terminalModel">
+                                                    <option value="CISCO_Jabber">CISCO _ Jabber</option>
+													<option value="CISCO_C20">CISCO_C20</option>
+                                                    <option value="CISCO_C40">CISCO_C40</option>
+                                                    <option value="CISCO_C60">CISCO_C60</option>
+                                                    <option value="CISCO_C90">CISCO_C90</option>
+                                                    <option value="CISCO_EX60">CISCO_EX60</option>
+                                                    <option value="CISCO_EX90">CISCO_EX90</option>
+                                                    <option value="CISCO_SX20">CISCO_SX20</option>
+                                                    <option value="CISCO_SX80">CISCO_SX80</option>
+                                                    <option value="CISCO_DX650">CISCO_DX650</option>
+													<option value="CISCO_DX70">CISCO_DX70</option>
+													<option value="CISCO_DX80">CISCO_DX80</option>
+													<option value="其他">其他</option>
+												
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="bandWidth">宽带设置 <span class="text-danger">
+											</span></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="bandWidth" name="bandWidth">
+                                                    <option value="0">自动</option>
+                                                    <option value="524388">512kb</option>
+                                                    <option value="786432">768kb</option>
+                                                    <option value="1048576">1.00M</option>
+                                                    <option value="1572864">1.5M</option>
+                                                    <option value="2097152">2.00M</option>
+                                                    <option value="3145728">3M</option>
+                                                    <option value="4194304">4M</option>
+                                                    <option value="6291456">6M</option>
+													<option value="8388608">8M</option>
+													<option value="10485760">10M</option>
+													<option value="15728640">15M</option>
+													<option value="20971520">20M</option>
+													<option value="314572801 ">30M</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">取消</button>
+                        <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal" onclick="updateTerminal()"><i class="fa fa-check"></i> 确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Pop Out Modal -->
+                    <!-- END Dynamic Table Simple -->
+                </div>
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+
+            
+        </div>
+        <!-- END Page Container -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+          <script src="assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+        <!-- Page JS Code -->
+       <script src="assets/js/pages/base_tables_datatables.js"></script>
+         <script  type="text/javascript">
+        $(function(){
+        	$.ajaxSetup({
+        	    complete:function(XMLHttpRequest,textStatus){
+        	          if(textStatus=="parsererror"){
+        	               $.messager.alert('提示信息', "登陆超时！请重新登陆！", 'info',function(){
+        	                   window.location.href = "${requestContext.contextPath}/index";
+        	               });
+        	          } else if(textStatus=="error"){
+        	              $.messager.alert('提示信息', "请求超时！请稍后再试！", 'info');
+        	          }
+        	    }
+        	});
+        	App.initHelpers('notify');	
+        	$.fn.serializeObject = function()    
+        	{    
+        	   var o = {};    
+        	   var a = this.serializeArray();    
+        	   $.each(a, function() {    
+        	       if (o[this.name]) {    
+        	           if (!o[this.name].push) {    
+        	               o[this.name] = [o[this.name]];    
+        	           }    
+        	           o[this.name].push(this.value || '');    
+        	       } else {    
+        	           o[this.name] = this.value || '';    
+        	       }    
+        	   });    
+        	   return o;    
+        	};  
+        	
+        	$("#logout").click(function(){
+        		$.ajax({
+        		  async: true,
+                  cache: false,
+                  type: "POST",
+                  url: '${requestContext.contextPath}/logout',   
+                  contentType:"application/json",
+                  datatype:"text",
+                  success: function(data, statusText, XHR) {
+                   if(data == "success"){
+                 	window.location.href ="${requestContext.contextPath}/index";
+                   }
+                   else{
+                 	 alert("注销失败！");
+                   }
+                  },
+                  error: function(XHR, statusText, errorThrow) {
+                    
+                  },
+                  complete: function(XHR, status) {
+                  	
+                  }
+        		});
+        	});
+        	
+        	runajax();      	
+
+
+        });
+        
+        function runajax(){
+
+        	
+     
+        	var tableData = $('#datatable').dataTable({
+        		"destroy": true,
+//         		"Processing" : true,	
+                pageLength: 10,
+                lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]],
+                "bAutoWidth": false,                   //是否启用自动适应列宽
+                "aoColumns": [                          //设定各列宽度   
+                                   {"sWidth": "5%"},   
+                                   {"sWidth": "30%"},   
+                                   {"sWidth": "15%"},        
+                                   {"sWidth": "10%"},
+                                   {"sWidth": "15%"},
+                                   {"sWidth": "15%"},
+                                   {"sWidth": "10%"}
+                               ],
+               
+                "oLanguage": {
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "对不起，查询不到任何相关数据",
+                    "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+                    "sInfoEmpty": "找不到相关数据",
+                    "sInfoFiltered": "数据表中共为 _MAX_ 条记录)",
+                    "sProcessing": "正在加载中...",
+                    "sSearch": "搜索",
+                    "oPaginate": {
+                        "sFirst":    "第一页",
+                        "sPrevious": " 上一页 ",
+                        "sNext":     " 下一页 ",
+                        "sLast":     " 最后一页 "
+                    }
+                },
+              
+                "ajax": {
+                	url: '${requestContext.contextPath}/terminal/queryTerminal',
+                    type:"post",
+                    dataSrc:function(result){
+						var jsonData =[];
+                    	for(var i=0;i<result.length;i++){
+                    		jsonData[i] = [result[i].id,result[i].uuid,result[i].name,result[i].meetingRoomStatus,result[i].terminalCallAddress,result[i].terminalModel];
+                    	}
+                        return jsonData;
+                    }
+               },
+                 columnDefs: [
+                	 { className: "text-center", "targets": [ 0 ] },
+                	 { className: "text-center", "targets": [ 1 ] },
+                	 { className: "font-w600", "targets": [ 2 ] },
+                	 { className: "hidden-xs", "targets": [ 3 ] },
+                	 { className: "hidden-xs", "targets": [ 4] },
+                	 { className: "hidden-xs", "targets": [ 5 ] },
+                	 { className: "hidden-xs", "targets": [ 6 ] },
+                	 {"targets": 0, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','5%');}},
+                	 {"targets": 1, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','30%');}},
+                	 {"targets": 2, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
+                	 {"targets": 3, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','10%');}},
+                	 {"targets": 4, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
+                	 {"targets": 5, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
+                	
+                	 
+                	 {"targets": 6, "render": function ( data, type, full, meta ) {
+                		 return "<button class='btn btn-xs btn-default' data-toggle='modal' data-target='#modal-small' type='button' data-toggle='tooltip' onclick='msg(this)' ><i class='fa fa-pencil'></i></button>"
+                		 }
+                	 },
+                	 {"targets": 3, "render": function ( data, type, full, meta ) {
+                		 var state="";
+                		 var stateName="";
+                		 if(data == "0"){
+                     		state = "label-success";
+                     		stateName ="空闲";
+                     		
+                     		
+                     	}else if (data =="1"){
+                     		state = "label-danger";
+                     		stateName ="占用";
+                     	}
+                		 return "<span class='label "+state+"'>"+stateName+"</span>" }}
+                 ]
+              
+            });
+        	setInterval( function () {
+        		tableData.api().ajax.reload();
+        	}, 2000 );	
+		}
+        
+//         var id="";
+//         var uuid="";
+//         var terminalCallAddress ="";
+//         var name ="";
+//         var model="";
+//         var bandwidth="";
+        
+        function msg(t){
+        	 var id=$(t).parent("td").parent("tr").children(":eq(0)").text();
+//         	 uuid=$(t).parent("td").parent("tr").children(":eq(1)").text();
+//         	 name=$(t).parent("td").parent("tr").children(":eq(2)").text();
+//         	 terminalCallAddress=$(t).parent("td").parent("tr").children(":eq(4)").text();
+//         	 model=$(t).parent("td").parent("tr").children(":eq(5)").text();
+        	 
+//         	 $("#id").attr("value",id);
+//         	 $("#uuid").attr("value",uuid);
+//         	 $("#name").attr("value",name);
+//         	 $("#terminalCallAddress").attr("value",terminalCallAddress);
+//         	 $("#terminalModel").attr("value",model);
+        	
+        	
+        	 $.ajax({
+         		  async: true,
+                   cache: false,
+                   type: "POST",
+                   data:"{\"id\":\""+id+"\"}",
+                   url: '${requestContext.contextPath}/terminal/queryTerminalForOne',   
+                   contentType:"application/json",
+                   datatype:"text",
+                   success: function(data, statusText, XHR) {
+                	  $("#id").attr("value",data[0].id);
+                  	 $("#uuid").attr("value",data[0].uuid);
+                  	 $("#name").attr("value",data[0].name);
+                  	 $("#terminalCallAddress").attr("value",data[0].terminalCallAddress);
+                  	 $("#terminalModel").attr("value",data[0].model);
+                  	 $("#bandWidth").attr("value",data[0].bandWidth);
+                   }
+         		});
+ 
+        }
+        
+        function updateTerminal(){
+        	var jsonuserinfo = $('#form1').serializeObject(); 
+//         	alert(JSON.stringify(jsonuserinfo));
+        	$.ajax({
+      		  async: true,
+                cache: false,
+                type: "POST",
+                data:JSON.stringify(jsonuserinfo),
+                url: '${requestContext.contextPath}/terminal/updateTerminal',   
+                contentType:"application/json",
+                datatype:"text",
+                success: function(data, statusText, XHR) {
+                	 if(data == "success"){
+                  	   $("#success").click();
+                     }
+                     else{
+                  	   $("#error").click();
+                     }
+                	 runajax();
+                },
+                error: function(XHR, statusText, errorThrow) {
+                  
+                },
+                complete: function(XHR, status) {
+                	
+                }
+      		});
+        }
+        </script>
+        
+    </body>
+</html>

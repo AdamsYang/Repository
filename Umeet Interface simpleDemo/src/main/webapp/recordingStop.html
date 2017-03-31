@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Umeet Interface simpleDemo</title>
+
+        <meta name="description" content="Umeet Interface simpleDemo">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
+    </head>
+    <body>
+        <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+   
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="side-header side-content bg-white-op">
+                            <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                            <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                                    <i class="si si-drop"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                                    <li>
+                                        <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-amethyst pull-right"></i> <span class="font-w600">Amethyst</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/city.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/flat.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/modern.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-modern pull-right"></i> <span class="font-w600">Modern</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-smooth pull-right"></i> <span class="font-w600">Smooth</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="h5 text-white" href="${requestContext.contextPath}/index">
+                                <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 sidebar-mini-hide">meet</span>
+                            </a>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Content -->
+                        <div class="side-content">
+                            <ul class="nav-main">
+                               <li >
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-users"></i><span class="sidebar-mini-hide">会议管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/createConference">开始会议</a>
+                                        </li>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/ConferenceList">会议列表</a>
+                                        </li>
+                                        <li>
+                                            <a   href="${requestContext.contextPath}/removeConference">结束会议</a>
+                                        </li>
+										</ul>
+                                </li>
+
+								 <li >
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-screen-tablet"></i><span class="sidebar-mini-hide">终端管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/addTerminal">终端添加</a>
+                                        </li>
+                                        <li>
+                                            <a  href="${requestContext.contextPath}/updateTerminal">终端修改</a>
+                                        </li>
+										<li>
+                                            <a href="${requestContext.contextPath}/queryTerminal">终端查询</a>
+                                        </li>
+                                        <li>
+                                            <a  href="${requestContext.contextPath}/deleteTerminal">终端删除</a>
+                                        </li>
+										</ul>
+                                   </li>
+								   <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-call-in"></i><span class="sidebar-mini-hide">呼叫管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/callTerminal">呼叫终端</a>
+                                        </li>
+										</ul>
+									 </li>
+
+								 <li>
+
+
+									 <li class="open">
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-video-camera"></i><span class="sidebar-mini-hide">录播管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a  href="${requestContext.contextPath}/recordingStart">开始录播</a>
+                                        </li>
+                                        <li>
+                                            <a class="active" href="${requestContext.contextPath}/recordingStop">结束录播</a>
+                                        </li>
+										<li>
+                                            <a href="${requestContext.contextPath}/queryRecordVideoURL">查询录播视频地址</a>
+                                        </li>
+                                        
+										</ul>
+                                </li>
+								  <li >
+								    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-social-youtube"></i><span class="sidebar-mini-hide">直播管理</span></a>
+									 <ul>
+<!--                                         <li> -->
+<!--                                             <a  href="${requestContext.contextPath}/startLive">开始直播</a> -->
+<!--                                         </li> -->
+                                        <li>
+                                            <a href="${requestContext.contextPath}/viewLive">查看直播</a>
+                                        </li>
+<!-- 										<li> -->
+<!--                                             <a  href="${requestContext.contextPath}/stopLive">结束直播</a> -->
+<!--                                         </li> -->
+                                        
+										</ul>
+									</li>
+									 <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-settings"></i><span class="sidebar-mini-hide">监控管理</span></a>
+									 <ul>
+                                        <li>
+                                            <a href="${requestContext.contextPath}/monitor">端口状态</a>
+                                        </li>
+										</ul>
+									 </li>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END Side Content -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+           <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <!-- Header Navigation Right -->
+                <ul class="nav-header pull-right">
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+                                <img src="assets/img/avatars/avatar10.jpg" alt="Avatar">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li id="logout">
+                                    <a tabindex="-1" href="#">
+                                        <i class="si si-logout pull-right"></i>退出登录
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                </ul>
+                <!-- END Header Navigation Right -->
+
+                <!-- Header Navigation Left -->
+                <ul class="nav-header pull-left">
+                    <li class="hidden-md hidden-lg">
+                  
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+             
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </li>
+  
+                    <li class="visible-xs">
+                 
+                        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                    
+                </ul>
+                <!-- END Header Navigation Left -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>录播管理</li>
+                                <li><a class="link-effect" href="">结束录播</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content content-narrow">
+                    <!-- Forms Row -->
+
+
+                            <div class="block">
+                                <div class="block-header">
+                                   
+                                    <h3 class="block-title"></h3>
+                                </div>
+                                <div class="block-content block-content-narrow">
+
+                                    <form class="js-validation-bootstrap form-horizontal" action="#" method="post">
+                                      <div class="form-group">
+                                            <label class="col-md-3 control-label" for="uuid">会议 <span class="text-danger">*</span></label>
+                                            <div class="col-md-6">
+                                                <select class="form-control"  id="uuid" name="uuid" >
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-8 col-md-offset-4">
+                                                <button class="btn btn-sm btn-primary" type="button" onclick="recordingStop()" >结&nbsp束&nbsp录&nbsp播</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                     <button id="error" style="display:none" class="js-notify btn btn-sm btn-danger" data-notify-type="danger" data-notify-align="center" data-notify-icon="fa fa-times" data-notify-message="结算书录播失败！">Error</button>
+                                   <button id="success" style="display:none" class="js-notify btn btn-sm btn-success" data-notify-type="success" data-notify-align="center" data-notify-icon="fa fa-check" data-notify-message="结束录播成功！">Success</button>
+                                </div>
+                            </div>
+                            <!-- Bootstrap Forms Validation -->
+                        </div>
+                        
+                            </div>
+                            <!-- END Material Forms Validation -->
+              
+                    <!-- END Forms Row -->
+                </div>
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+
+            
+        </div>
+        <!-- END Page Container -->
+
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="assets/js/pages/base_forms_validation.js"></script>
+         <script  type="text/javascript">
+        $(function(){
+        	$.ajaxSetup({
+        	    complete:function(XMLHttpRequest,textStatus){
+        	          if(textStatus=="parsererror"){
+        	               $.messager.alert('提示信息', "登陆超时！请重新登陆！", 'info',function(){
+        	                   window.location.href = "${requestContext.contextPath}/index";
+        	               });
+        	          } else if(textStatus=="error"){
+        	              $.messager.alert('提示信息', "请求超时！请稍后再试！", 'info');
+        	          }
+        	    }
+        	});
+        	App.initHelpers('notify');	
+        	$.fn.serializeObject = function()    
+        	{    
+        	   var o = {};    
+        	   var a = this.serializeArray();    
+        	   $.each(a, function() {    
+        	       if (o[this.name]) {    
+        	           if (!o[this.name].push) {    
+        	               o[this.name] = [o[this.name]];    
+        	           }    
+        	           o[this.name].push(this.value || '');    
+        	       } else {    
+        	           o[this.name] = this.value || '';    
+        	       }    
+        	   });    
+        	   return o;    
+        	};  
+        	$("#logout").click(function(){
+        		$.ajax({
+        		  async: true,
+                  cache: false,
+                  type: "POST",
+                  url: '${requestContext.contextPath}/logout',   
+                  contentType:"application/json",
+                  datatype:"text",
+                  success: function(data, statusText, XHR) {
+                   if(data == "success"){
+                 	window.location.href ="${requestContext.contextPath}/index";
+                   }
+                   else{
+                 	 alert("注销失败！");
+                   }
+                  },
+                  error: function(XHR, statusText, errorThrow) {
+                    
+                  },
+                  complete: function(XHR, status) {
+                  	
+                  }
+        		});
+        	});
+        	
+        	getMeetingUuid();
+       	 $("#uuid").click(function(){
+       		 getMeetingUuid();
+       	 });
+       	 
+        });
+        
+        function getMeetingUuid(){
+   		 $.ajax({
+      		  async: true,
+                cache: false,
+                type: "POST",
+                url: '${requestContext.contextPath}/conference/ConferenceList/online',   
+                contentType:"application/json",
+                datatype:"text",
+                success: function(data, statusText, XHR) {
+               	 	$("#uuid").empty();
+               	 	if(data.length == 0){
+               	 		$("#uuid").append("<option value=''>暂无会议</option>");
+               	 	}else{
+               	 		for(var i=0;i<data.length;i++){
+                      		 
+                      		 $("#uuid").append("<option value='"+data[i].uuid+"'>"+data[i].name+"</option>");
+                      	    }
+               	 	}
+               	 
+               	 }
+   	 });
+    }
+        
+        function recordingStop(){
+        	var uuid=$("#uuid").val();
+        	 $.ajax({
+         		  async: true,
+                   cache: false,
+                   type: "POST",
+                   url: '${requestContext.contextPath}/recording/recordingStop/'+uuid,   
+                   contentType:"application/json",
+                   datatype:"text",
+                   success: function(data, statusText, XHR) {
+                	   if(data == "success"){
+                    	   $("#success").click();
+                       }
+                       else{
+                    	   $("#error").click();
+                       }
+
+                   }
+      	 });
+        }
+        </script>
+    </body>
+</html>
