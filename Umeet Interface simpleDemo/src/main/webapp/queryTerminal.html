@@ -364,7 +364,7 @@
                 "aoColumns": [                          //设定各列宽度   
                                {"sWidth": "5%"},   
                                {"sWidth": "25%"},   
-                               {"sWidth": "10%"},   
+                               {"sWidth": "15%"},   
                                {"sWidth": "25%"}, 
                                {"sWidth": "10%"},
                                {"sWidth": "15%"},
@@ -408,7 +408,7 @@
                 	 { className: "hidden-xs", "targets": [ 6 ] },
                 	 {"targets": 0, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','5%');}},
                 	 {"targets": 1, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','20%');}},
-                	 {"targets": 2, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','10%');}},
+                	 {"targets": 2, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
                 	 {"targets": 3, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','25%');}},
                 	 {"targets": 4, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','10%');}},
                 	 {"targets": 5, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
@@ -429,9 +429,9 @@
                  ]
               
             });
-        	setInterval( function () {
-        		tableData.api().ajax.reload();
-        	}, 2000 );
+//         	setInterval( function () {
+//         		tableData.api().ajax.reload();
+//         	}, 2000 );
 			}
         
         </script>

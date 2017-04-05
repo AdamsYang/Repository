@@ -319,9 +319,9 @@
                                             <div class="col-md-7">
                                                 <select class="form-control" id="cpLayout" name="cpLayout">
 <!--                                                     <option value="100">allEqual</option> -->
-                                                    <option value="200">speakerOnly</option>
+                                                    <option value="200">签约室模式</option>
 <!--                                                     <option value="300">telepressence</option> -->
-                                                    <option value="400">stacked</option>
+                                                    <option value="400">审核室模式</option>
 <!--                                                     <option value="500">allEqualQuarters</option> -->
 <!--                                                     <option value="600">allEqualNinths</option> -->
 <!--                                                     <option value="700">allEqualSixteenths</option> -->
@@ -445,11 +445,7 @@
         	});
         	
         	getMeetingUuid();
-        	 $("#meetingUuid").click(function(){
-        		 getMeetingUuid();
-        	 });
-        	 
-        	 
+        	
         	
         	 if($("#dialIp").get(0).tagName =="SELECT"){
         		 getTerminalCallAddress();
