@@ -417,6 +417,11 @@
         	});
         	
         	$("#addTerminal").click(function(){
+        		if($("#name").val() =="" || $("#terminalCallAddress").val() ==""){
+        			$("#error").attr("data-notify-message","终端名或呼叫地址不能为空	！")
+        			$("#error").click();
+        		}else{
+        		
         		var jsonuserinfo = $('#form1').serializeObject();  
 // 				alert(JSON.stringify(jsonuserinfo));
         		$.ajax({
@@ -443,6 +448,7 @@
                   }
 						
         		});
+        	 }
         	});
         			
         });

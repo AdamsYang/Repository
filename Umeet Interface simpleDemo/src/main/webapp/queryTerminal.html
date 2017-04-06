@@ -156,13 +156,13 @@
 								    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-social-youtube"></i><span class="sidebar-mini-hide">直播管理</span></a>
 									 <ul>
                                         <li>
-                                            <a href="${requestContext.contextPath}/startLive">开始直播</a>
+<!--                                             <a href="${requestContext.contextPath}/startLive">开始直播</a> -->
                                         </li>
                                         <li>
                                             <a href="${requestContext.contextPath}/viewLive">查看直播</a>
                                         </li>
 										<li>
-                                            <a href="${requestContext.contextPath}/stopLive">结束直播</a>
+<!--                                             <a href="${requestContext.contextPath}/stopLive">结束直播</a> -->
                                         </li>
                                         
 										</ul>
@@ -429,9 +429,9 @@
                  ]
               
             });
-//         	setInterval( function () {
-//         		tableData.api().ajax.reload();
-//         	}, 2000 );
+        	 setInterval( function () {
+         		tableData.api().ajax.reload(null, false);
+         	}, 5000 );	
 			}
         
         </script>

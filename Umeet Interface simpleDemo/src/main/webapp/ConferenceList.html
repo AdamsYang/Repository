@@ -471,7 +471,9 @@
                         "sLast":     " 最后一页 "
                     }
                 },
-              
+                "aaSorting": [
+          					[ 4, "desc" ]
+          				],
                 "ajax": {
                     url: '${requestContext.contextPath}/conference/ConferenceList/'+query,
                     type:"post",
@@ -521,9 +523,9 @@
                  ]
               
             });
-//         	setInterval( function () {
-//         		tableData.api().ajax.reload();
-//         	}, 1000 );	
+        	setInterval( function () {
+        		tableData.api().ajax.reload(null, false);
+        	}, 5000 );	
 			}
         
         var uuid="";

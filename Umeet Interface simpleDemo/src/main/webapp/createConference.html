@@ -405,6 +405,12 @@
 
 
         	$("#createMeeting").click(function(){
+        		if($("#name").val() ==""){
+        			$("#error").attr("data-notify-message","会议名不能为空！")
+        			$("#error").click();
+        		}else{
+        			
+        		
         		var jsonuserinfo = $('#form1').serializeObject();  
 // 				alert(JSON.stringify(jsonuserinfo));
         		$.ajax({
@@ -431,7 +437,9 @@
                   }
 						
         		});
+        		}	
         	});
+        	
         });
         </script>
     </body>
