@@ -268,7 +268,8 @@
                                         <th class="text-center">会议名</th>
                                         <th class="text-center">视频文件名称</th>
                                         <th class="text-center">日期</th>
-										<th class="text-center" >录播地址</th>										                          
+										<th class="text-center" >录播地址</th>	
+										<th class="text-center" >操作</th>									                          
                                     </tr>
                                 </thead>                                  
                                 </tbody>
@@ -276,7 +277,27 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table Full -->
-
+					<div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
+						            <div class="modal-dialog" style="width:620px" >
+						                <div class="modal-content">
+						                    <div class="block block-themed block-transparent remove-margin-b">
+						                        <div class="block-header bg-primary-dark">
+						                            <ul class="block-options">
+						                                <li>
+						                                    <button  data-dismiss="modal" type="button"><i class="si si-close"  ></i></button>
+						                                </li>
+						                            </ul>
+						                            <h3 id="title" class="block-title">提示</h3>
+						                        </div>
+						                        <div class="block-content" style="padding:10px 10px 10px">
+						                        					
+						   							<div id="a1"></div>
+						                   		 </div>
+						                    </div>
+						                
+						                </div>
+						            </div>
+						        </div>         
                    
                     <!-- END Dynamic Table Simple -->
                 </div>
@@ -302,6 +323,7 @@
 
         <!-- Page JS Code -->
        <script src="assets/js/pages/base_tables_datatables.js"></script>
+       <script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
          <script  type="text/javascript">
         $(function(){
         	$.ajaxSetup({
@@ -365,7 +387,7 @@
                                {"sWidth": "15%"},   
                                {"sWidth": "20%"},
                                {"sWidth": "30%"},
-                               
+                               {"sWidth": "5%"},
                                ],
                
                 "oLanguage": {
@@ -403,12 +425,17 @@
                 	 { className: "font-w600", "targets": [ 2 ] },
                 	 { className: "text-center", "targets": [ 3 ] },
                 	 { className: "font-w600", "targets": [ 4 ] },
+                	
 
                 	 {"targets": 0, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','25%');}},
                 	 {"targets": 1, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','10%');}},
                 	 {"targets": 2, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','15%');}},
                 	 {"targets": 3, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','20%');}},
                 	 {"targets": 4, "createdCell": function (td, cellData, rowData, row, col) { $(td).css('width','30%');}},
+                	 {"targets": 5, "render": function ( data, type, full, meta ) {
+                		 return "<button class='btn btn-minw btn-primary' data-toggle='modal' data-target='#modal-fadein' type='button'  onclick='msg(this)' >播放</button>"
+                		 }
+                	 },
                 	
                 	
                  ]
@@ -418,6 +445,23 @@
          		tableData.api().ajax.reload(null, false);
          	}, 5000 );	
 		}
+        
+        var realurl="";
+        function msg(t){
+        	 var suburl=($(t).parent("td").parent("tr").children(":eq(4)").text()).substring(17);;
+        	 realurl="http://192.168.22.209/video"+suburl;
+//         	 alert(realurl);
+        	 var flashvars={
+         				
+            			p:1
+            			};
+//         		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        		var video=[realurl];
+        		var support=['all'];
+        	    CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
+            }
+        	 
+        
         
         </script>
         
