@@ -578,7 +578,9 @@
                   success: function(data, statusText, XHR) {
                 	 	 var str ="";
                  		for(var i=0;i<data.length;i++){
-                 			 str += data[i].name+",";
+                 			if(data[i].status == "PAR_CONNECTED"){
+                 				str += data[i].name+",";
+                 			}
                  		}
                  		if(str ==""){
                  			$("#Participant").val("无");
