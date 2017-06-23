@@ -6,4 +6,4 @@ v2.5 call实体类增加important参数
 v2.5.2 更新cookies设置
 v2.5.4 更新connectTimeout等待为30秒
 v2.5.5 更新超时等待时间，等待超时后再重试5次
-v
+v3.0 重写cookies机制，取消线程池，每个连接互相独立。
